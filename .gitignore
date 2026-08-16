@@ -1,8 +1,12 @@
 # dot files
 /.vscode/launch.json
+/.vscode/mrs-tools/
 /.settings
+/.mrs/
+/.eide/
 /.eide/log
 /.eide.usr.ctx.json
+/README-编译教程.md
 
 # project out
 /build
