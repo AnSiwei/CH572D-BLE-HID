@@ -1,0 +1,5 @@
+CompileFlags:
+  Add: []
+  Remove: []
+  CompilationDatabase: ./build/Debug
+  Compiler: null\bin\riscv-none-embed-gcc.exe

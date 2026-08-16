@@ -1,0 +1,57 @@
+{
+  "configurations": [
+    {
+      "name": "HID_Mouse",
+      "compilerArgs": [
+        "-march=rv32imc_zba_zbb_zbc_zbs_xw",
+        "-mabi=ilp32"
+      ],
+      "cStandard": "gnu99",
+      "cppStandard": "gnu++11",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/./obj/Startup",
+        "${workspaceFolder}/APP/include",
+        "${workspaceFolder}/Profile/include",
+        "${workspaceFolder}/./obj/StdPeriphDriver/inc",
+        "${workspaceFolder}/./obj/HAL/include",
+        "${workspaceFolder}/./obj/Ld",
+        "${workspaceFolder}/./obj/LIB",
+        "${workspaceFolder}/./obj/RVMSIS",
+        "${workspaceFolder}/./obj/HAL/**",
+        "${workspaceFolder}/./obj/LIB/**",
+        "${workspaceFolder}/./obj/Ld/**",
+        "${workspaceFolder}/./obj/RVMSIS/**",
+        "${workspaceFolder}/./obj/Startup/**",
+        "${workspaceFolder}/./obj/StdPeriphDriver/**"
+      ],
+      "defines": [
+        "DEBUG=0"
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "${workspaceFolder}/**",
+          "${workspaceFolder}/./obj/Startup",
+          "${workspaceFolder}/APP/include",
+          "${workspaceFolder}/Profile/include",
+          "${workspaceFolder}/./obj/StdPeriphDriver/inc",
+          "${workspaceFolder}/./obj/HAL/include",
+          "${workspaceFolder}/./obj/Ld",
+          "${workspaceFolder}/./obj/LIB",
+          "${workspaceFolder}/./obj/RVMSIS",
+          "${workspaceFolder}/./obj/HAL/**",
+          "${workspaceFolder}/./obj/LIB/**",
+          "${workspaceFolder}/./obj/Ld/**",
+          "${workspaceFolder}/./obj/RVMSIS/**",
+          "${workspaceFolder}/./obj/Startup/**",
+          "${workspaceFolder}/./obj/StdPeriphDriver/**",
+          "${workspaceFolder}/./obj/HAL",
+          "${workspaceFolder}/./obj/StdPeriphDriver"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    }
+  ],
+  "version": 4
+}

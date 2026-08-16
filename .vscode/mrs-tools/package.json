@@ -1,0 +1,106 @@
+{
+	"name": "mrs-tools",
+	"displayName": "MRS Tools (CH572 Build & Flash)",
+	"description": "在 VS Code 中一键编译和烧录 CH572D 项目（使用 MounRiver Studio 工具链）",
+	"version": "1.0.0",
+	"publisher": "local",
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "mrs-tools.build",
+				"title": "MRS: 编译 (Build)"
+			},
+			{
+				"command": "mrs-tools.flash",
+				"title": "MRS: 烧录 (Flash)"
+			},
+			{
+				"command": "mrs-tools.buildAndFlash",
+				"title": "MRS: 编译并烧录"
+			},
+			{
+				"command": "mrs-tools.clean",
+				"title": "MRS: 清理 (Clean)"
+			},
+			{
+				"command": "mrs-tools.selectDebugger",
+				"title": "MRS: 选择调试器"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "mrs-tools.build",
+					"group": "mrs-tools@1"
+				},
+				{
+					"command": "mrs-tools.flash",
+					"group": "mrs-tools@2"
+				},
+				{
+					"command": "mrs-tools.buildAndFlash",
+					"group": "mrs-tools@3"
+				},
+				{
+					"command": "mrs-tools.clean",
+					"group": "mrs-tools@4"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "mrs-tools.build",
+					"when": "true"
+				},
+				{
+					"command": "mrs-tools.flash",
+					"when": "true"
+				},
+				{
+					"command": "mrs-tools.buildAndFlash",
+					"when": "true"
+				},
+				{
+					"command": "mrs-tools.clean",
+					"when": "true"
+				},
+				{
+					"command": "mrs-tools.selectDebugger",
+					"when": "true"
+				}
+			]
+		},
+		"configuration": {
+			"title": "MRS Tools",
+			"properties": {
+				"mrsTools.mrsHome": {
+					"type": "string",
+					"default": "D:\\MounRiver\\MounRiver_Studio2",
+					"description": "MounRiver Studio 2 安装目录（仅当工作区 tools 目录不存在时作为回退）"
+				},
+				"mrsTools.debugger": {
+					"type": "string",
+					"enum": [
+						"wchlink",
+						"jlink"
+					],
+					"enumDescriptions": [
+						"WCH-Link (WCH 官方调试器)",
+						"SEGGER J-Link (RISC-V 版本)"
+					],
+					"default": "wchlink",
+					"description": "烧录使用的调试器"
+				}
+			}
+		}
+	}
+}
